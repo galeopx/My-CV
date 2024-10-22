@@ -1,3 +1,4 @@
+/* Ces règles CSS s'appliquent à tout le code */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 body{
@@ -9,6 +10,7 @@ body{
 h1, h2, h3 h4{
     font-family: "Lato", sans-serif;
 }
+/* Les règles CSS pour la partie du Header */
 header{
     background-color: #17abb3;
     color: #ffffff;
@@ -30,7 +32,7 @@ header{
 .profile-pic img{
     width: 200px;
     height: 200px;
-    border-radius: 50%;
+    border-radius: 50%;         /* Pour un bord totalement arrondi le % est le plus accurate */
     border: 5px solid #ffffff;
 }
 .header-content{
@@ -40,11 +42,11 @@ h1{
     margin: 0;
     font-size: 3em;
 }
-h2{
+header h2{
     margin: 5px 0;
     font-size: 1.3em;
 }
-.contact {
+.contact {                      /* Pour la partie contact il me semblait plus lgique de créer une grille */
     display: grid;
     grid-template-columns: 1fr 1fr; /* 2 colonnes */
     gap: 15px ;
@@ -62,27 +64,7 @@ h2{
     height: 29px;
     margin-right: 10px;
 }
-
-.grid-core{
-    position: relative;
-    width: 100%;
-    min-height: 1000px;
-    display: grid;
-    background: #ffffff;
-    grid-template-columns: 2fr 5fr;
-    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
-
-}
-.grid-core .left-side{
-    position: relative;
-    background: #e3e3e3e3;
-    padding: 15px;
-}
-.grid-core .right-side{
-    position: relative;
-    background: rgb(255, 255, 255);
-    padding: 15px;
-}
+/* Les règles CSS pour la partie du footer */
 footer{
     background-color: #17abb3;
     color: #ffffff;
@@ -103,14 +85,72 @@ footer{
     gap: 15px;
 }
 .social-link li{
-    display: inline;
+    display: inline; /* J'ai utiliser un format de liste donc pour les mettre en ligne cela est nécessaire */
 }
 .social-link img{
     width: 29px;
     height: 29px;
 }
-.footer-content p{
+.footer-content p{      /* le contenu de la balise <p></p> est en dehors de la classe social link */
     color: #ffffff;
     font-size: small;
     font-style: italic;
+}
+/* Les règles CSS pour le core de la page */
+.grid-core{
+    position: relative;
+    width: 100%;
+    min-height: 1000px;
+    display: grid;
+    background: #ffffff;
+    grid-template-columns: 2fr 5fr;        /* J'ai utilisé le format de colonne pour scindé les deux parties du core */
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+}
+/* Les règles CSS pour le left Side de la page */
+.grid-core .left-side{
+    position: relative;
+    background: #e3e3e3e3;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 60px;
+}
+.left-side h2{
+    color: #17abb3;
+    font-size: 1.3em;
+    margin-top: 0;
+}
+.gras{
+    font-weight: bold;
+}
+.without-puce{
+    list-style-type: none;
+    padding: 0;
+}
+.with-puce{
+    list-style-type: square;
+}
+.with-puce li::marker{
+    color: #17abb3;
+}
+.with-puce li{
+    color: black;
+}
+.left-side li{
+    margin-bottom: 10px;
+}
+.section-gauche{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    border-top: 1px solid rgba(200, 200, 200, 0.6);
+}
+.without-puce li{
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid-core .right-side{
+    position: relative;
+    background: rgb(255, 255, 255);
+    padding: 15px;
 }
