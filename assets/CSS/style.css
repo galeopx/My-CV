@@ -21,6 +21,7 @@ header{
     align-items: center;
     max-width: 800px;
     width: 100%;
+    height: 270px;
 }
 .profile-pic{
     margin-right: 200px;
@@ -56,9 +57,60 @@ h2{
     text-decoration: none;
     font-size: 16px;
 }
-
 .contact-item img {
     width: 29px;
     height: 29px;
     margin-right: 10px;
+}
+
+.grid-core{
+    position: relative;
+    width: 100%;
+    min-height: 1000px;
+    display: grid;
+    background: #ffffff;
+    grid-template-columns: 2fr 5fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+
+}
+.grid-core .left-side{
+    position: relative;
+    background: #e3e3e3e3;
+    padding: 15px;
+}
+.grid-core .right-side{
+    position: relative;
+    background: rgb(255, 255, 255);
+    padding: 15px;
+}
+footer{
+    background-color: #17abb3;
+    color: #ffffff;
+    max-height: 70px;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+.footer-content{
+    width: 100%;
+    margin: auto;
+}
+.social-link{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.social-link li{
+    display: inline;
+}
+.social-link img{
+    width: 29px;
+    height: 29px;
+}
+.footer-content p{
+    color: #ffffff;
+    font-size: small;
+    font-style: italic;
 }
