@@ -112,7 +112,7 @@ footer{
     background: #e3e3e3e3;
     padding-left: 45px;
     padding-right: 45px;
-    padding-top: 60px;
+    padding-top: 40px;
 }
 .left-side h2{
     color: #17abb3;
@@ -166,5 +166,42 @@ footer{
 .grid-core .right-side{
     position: relative;
     background: rgb(255, 255, 255);
-    padding: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 40px;
+}
+.right-side h2{
+    color: #17abb3;
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+.section-right{
+    border-top: 1px solid rgba(200, 200, 200, 0.6);
+    padding-top: 15px;
+}
+.indente{
+    text-indent: 20px;
+    text-align: justify;
+}
+
+.formation{                 /* Le CSS pour la partie Formation du CV */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.details{
+    max-width: 80%;
+}
+.formation h3{
+    margin: 0;
+    font-size: 1em;
+}
+.details p{
+    margin-top: 1px;
+    font-style: italic;
+    font-size: 0.8em;
+}
+.date{                  /* Il semblerait que ces données doivent être alignées avec le nom des diplômes mais j'ai pas réussi */
+    color: #17abb3;
+    white-space: nowrap;
 }
